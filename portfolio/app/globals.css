@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #38bdf8;
+  --text-gray: #94a3b8;
+  --text-light: #f8fafc;
+  --background-dark: #0f172a;
+  --background-dark-50: rgba(15, 23, 42, 0.5);
+  --background-darkest: #0b1120;
+  --gradient-light: #f8fafc;
+  --gradient-dark: #94a3b8;
+  --primary-opacity-015: rgba(56, 189, 248, 0.15);
+  --primary-opacity-02: rgba(56, 189, 248, 0.2);
+  --primary-opacity-03: rgba(56, 189, 248, 0.3);
+  --primary-opacity-04: rgba(56, 189, 248, 0.4);
+  --primary-opacity-05: rgba(56, 189, 248, 0.5);
+  --primary-opacity-07: rgba(56, 189, 248, 0.7);
+  --primary-opacity-08: rgba(56, 189, 248, 0.8);
+}
+
+@theme inline {
+  --color-primary: var(--primary);
+  --color-text-gray: var(--text-gray);
+  --color-text-light: var(--text-light);
+  --color-background-dark: var(--background-dark);
+  --color-background-dark-50: var(--background-dark-50);
+  --color-background-darkest: var(--background-darkest);
+  --color-gradient-light: var(--gradient-light);
+  --color-gradient-dark: var(--gradient-dark);
+  --color-primary-opacity-015: var(--primary-opacity-015);
+  --color-primary-opacity-02: var(--primary-opacity-02);
+  --color-primary-opacity-03: var(--primary-opacity-03);
+  --color-primary-opacity-04: var(--primary-opacity-04);
+  --color-primary-opacity-05: var(--primary-opacity-05);
+  --color-primary-opacity-07: var(--primary-opacity-07);
+  --color-primary-opacity-08: var(--primary-opacity-08);
+  --font-sans: var(--font-arimo);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0f172a;
+  font-family: var(--font-arimo), Arial, Helvetica, sans-serif;
+}
+
+.social-icon-hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social-icon-hover:hover {
+  background-color: var(--primary);
+}
