@@ -1,24 +1,24 @@
 import { useState, useEffect } from "react";
 
+const animationDuration = 1000;
+const animationSteps = 50;
+
 export function useStatCardAnimation(statValue: string) {
   const [displayValue, setDisplayValue] = useState(0);
 
   useEffect(() => {
-    const numericValue = parseInt(statValue.replace(/\D/g, ""));
-    const animationDuration = 1000;
-    const animationSteps = 50;
-    const valueIncrement = numericValue / animationSteps;
+    const targetValue = parseInt(statValue.replace(/\D/g, ""));
+    const valueIncrement = targetValue / animationSteps;
     const stepDuration = animationDuration / animationSteps;
 
-    let currentAnimatedValue = 0;
+    let currentValue = 0;
     const animationTimer = setInterval(() => {
-      currentAnimatedValue += valueIncrement;
-      if (currentAnimatedValue >= numericValue) {
-        setDisplayValue(numericValue);
+      currentValue += valueIncrement;
+      if (currentValue >= targetValue) {
+        setDisplayValue(targetValue);
         clearInterval(animationTimer);
-      }
-      else {
-        setDisplayValue(Math.floor(currentAnimatedValue));
+      } else {
+        setDisplayValue(Math.floor(currentValue));
       }
     }, stepDuration);
 

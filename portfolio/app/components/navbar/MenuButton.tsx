@@ -1,7 +1,6 @@
 import { IconMenu } from "../ui/icons/IconMenu";
 
 interface MenuButtonProps {
-  isOpen: boolean;
   onToggle: () => void;
 }
 

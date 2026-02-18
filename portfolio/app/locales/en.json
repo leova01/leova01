@@ -1,0 +1,130 @@
+{
+  "navbar": {
+    "links": {
+      "home": "Home",
+      "about": "About",
+      "stack": "Tools",
+      "experience": "Experience",
+      "contact": "Contact"
+    }
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "available": "Available for projects",
+    "description": "Creating exceptional digital experiences with clean code and modern designs. Specialized in modern tools and fluid animations.",
+    "downloadCV": "Download CV",
+    "viewProjects": "View Projects",
+    "stats": {
+      "yearsOfExperience": "Years of experience",
+      "technologies": "Technologies mastered"
+    },
+    "titles": [
+      "Frontend Developer",
+      "Backend Developer",
+      "Full Stack Developer",
+      "Web Developer",
+      "Web Consultant",
+      "Software Engineer"
+    ]
+  },
+  "about": {
+    "title": "About Me",
+    "firstParagraph": "I am Leonel Valcarcel, a Full Stack Developer and Software Engineer passionate about creating complete web experiences. I combine my experience in Frontend and Backend to build scalable solutions, writing clean code and optimizing every layer of the application.",
+    "secondParagraph": "My approach is based on technological versatility, working with a wide range of frameworks, programming languages, and development tools that allow me to efficiently adapt to the specific requirements of each project. From developing modern and reactive user interfaces to building robust and scalable backend services, I cover the entire spectrum of contemporary web development.",
+    "technicalSkills": "Technical Skills",
+    "skills": {
+      "cleanCode": {
+        "name": "Clean Code",
+        "text": "I write maintainable and scalable code"
+      },
+      "performance": {
+        "name": "Performance",
+        "text": "Optimized for Core Web Vitals"
+      },
+      "collaboration": {
+        "name": "Collaboration",
+        "text": "Effective work in agile teams"
+      }
+    }
+  },
+  "stack": {
+    "title": "My Stack",
+    "description": "Technologies and tools I use to create exceptional digital experiences"
+  },
+  "experience": {
+    "title": "Professional Experience",
+    "subtitle": "My journey in the web development world",
+    "jobs": [
+      {
+        "period": "Sept. 2024 - Feb. 2026",
+        "title": "OTT Application Developer",
+        "company": "Velope Inc.",
+        "description": "Velope is an engineering firm specialized in developing platforms for connected TVs and multimedia devices. Our solutions address the limitations of the entire technology stack and leverage cutting-edge development techniques to provide a rich, attractive in-motion user experience.",
+        "achievements": [
+          "Development of OTT applications using Typescript and the Lightning framework",
+          "Creation of scalable and maintainable applications for various TV devices and browsers",
+          "Implementation of rich animation user experiences"
+        ]
+      },
+      {
+        "period": "Feb. 2024 - Sept. 2024",
+        "title": "Full-stack Developer",
+        "company": "Carbones del Zulia, S.A. (CARBOZULIA)",
+        "description": "I work as an administration analyst and application developer, developing the necessary web applications required by the company to optimize all internal and external processes.",
+        "achievements": [
+          "Development of web applications for optimization of internal and external processes",
+          "Implementation of frontend solutions with Node.js"
+        ]
+      },
+      {
+        "period": "Sept. 2023 - Jan. 2024",
+        "title": "Full Stack Programmer",
+        "company": "Kayratech",
+        "description": "I worked as a full stack developer performing user interface creation and endpoint activities.",
+        "achievements": [
+          "Creation of user interfaces",
+          "Endpoint development using NestJS",
+          "Implementation of solutions with Angular"
+        ]
+      },
+      {
+        "period": "Aug. 2023 - Nov. 2023",
+        "title": "Full Stack Programmer",
+        "company": "Jardín El Guacamayo",
+        "description": "I worked as a Full Stack developer, successfully completing a complete e-commerce.",
+        "achievements": [
+          "User interface for buying and selling products",
+          "Administrator interface with user, product, coupon, discount and messaging management",
+          "Creation of a Web API for request handling",
+          "Implementation of non-relational database (MongoDB)",
+          "Complete deployment + SSL certificate on VPS"
+        ]
+      },
+      {
+        "period": "Jan. 2023 - Apr. 2023",
+        "title": "Intern",
+        "company": "Servieduca",
+        "description": "I worked as an intern at Servieduca as a backend developer.",
+        "achievements": [
+          "Backend development of web applications"
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "title": "Have a project <span>in mind?</span>",
+    "description": "I'm available to collaborate on interesting projects. Let's connect and do something amazing together!",
+    "sendMessage": "Send me a message",
+    "social": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "email": "Email"
+    },
+    "footer": "© 2026 Leonel Valcarcel. Built with React and Tailwind CSS."
+  },
+  "language": {
+    "toggle": "Language",
+    "en": "English",
+    "es": "Español"
+  }
+}

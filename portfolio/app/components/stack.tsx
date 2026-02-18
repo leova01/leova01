@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useLanguage } from "../contexts/LanguageContext";
 
 interface TechCardProps {
   name: string;
@@ -41,16 +42,17 @@ const technologies = [
 ];
 
 export default function Stack() {
+  const { t } = useLanguage();
+
   return (
     <section id="stack" className="min-h-auto py-12 flex items-center">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-[56px] font-bold mb-4 bg-gradient-to-b from-text-light to-text-gray bg-clip-text text-transparent">
-            Mi Stack
+            {t.stack.title}
           </h2>
           <p className="text-[18px] font-normal max-w-2xl mx-auto text-text-gray">
-            Tecnologías y herramientas que utilizo para crear experiencias
-            digitales excepcionales
+            {t.stack.description}
           </p>
         </div>
 

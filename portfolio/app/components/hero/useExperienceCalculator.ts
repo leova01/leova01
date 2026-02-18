@@ -1,16 +1,9 @@
-export function useExperienceCalculator(graduationDate: Date) {
-  const calculateExperience = () => {
-    const currentDate = new Date();
-    const yearsDifference = currentDate.getFullYear() - graduationDate.getFullYear();
-    const monthsDifference = currentDate.getMonth() - graduationDate.getMonth();
+export function useExperienceCalculator(startDate: Date) {
+  const currentDate = new Date();
+  const yearsDifference = currentDate.getFullYear() - startDate.getFullYear();
+  const monthsDifference = currentDate.getMonth() - startDate.getMonth();
 
-    if (monthsDifference < 0) {
-      return yearsDifference - 1;
-    }
-    return yearsDifference;
-  };
-
-  const yearsOfExperience = calculateExperience();
+  const yearsOfExperience = monthsDifference < 0 ? yearsDifference - 1 : yearsDifference;
 
   return { yearsOfExperience };
 }

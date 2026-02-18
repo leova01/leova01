@@ -1,21 +1,24 @@
 "use client";
 
 import Image from "next/image";
+import { useLanguage } from "../contexts/LanguageContext";
 
 export default function Contact() {
+  const { t } = useLanguage();
+
   const socialLinks = [
     {
-      name: "GitHub",
+      name: t.contact.social.github,
       icon: "/icons/stackIcons/github.svg",
       url: "https://github.com/leova01?tab=repositories",
     },
     {
-      name: "LinkedIn",
+      name: t.contact.social.linkedin,
       icon: "/icons/stackIcons/linkedin.svg",
       url: "https://www.linkedin.com/in/leonel-valcarcel/",
     },
     {
-      name: "Email",
+      name: t.contact.social.email,
       icon: "/icons/stackIcons/email.svg",
       url: "mailto:leonelvalcarcel01@gmail.com",
     },
@@ -28,13 +31,12 @@ export default function Contact() {
     >
       <div className="container mx-auto max-w-4xl">
         <div className="text-center mb-8">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-text-light">
-            ¿Tienes un proyecto{" "}
-            <span className="text-primary">en mente?</span>
-          </h2>
+          <h2
+            className="text-4xl md:text-5xl font-bold mb-4 text-text-light"
+            dangerouslySetInnerHTML={{ __html: t.contact.title }}
+          />
           <p className="text-base max-w-xl mx-auto text-text-gray">
-            Estoy disponible para colaborar en proyectos interesantes.
-            ¡Conectemos y hagamos algo increíble juntos!
+            {t.contact.description}
           </p>
         </div>
 
@@ -71,12 +73,12 @@ export default function Contact() {
               height={20}
               className="w-5 h-5 brightness-0 invert"
             />
-            Envíame un mensaje
+            {t.contact.sendMessage}
           </a>
         </div>
 
         <div className="text-center text-sm text-text-gray">
-          <p>© 2026 Leonel Valcarcel. Construido con React y Tailwind CSS.</p>
+          <p>{t.contact.footer}</p>
         </div>
       </div>
     </footer>

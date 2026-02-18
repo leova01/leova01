@@ -1,12 +1,7 @@
-import { NavLinkItem } from "./NavLinkItem";
+"use client";
 
-const navLinks = [
-  { name: "Inicio", href: "#hero" },
-  { name: "Sobre mí", href: "#about" },
-  { name: "Herramientas", href: "#stack" },
-  { name: "Experiencia", href: "#experience" },
-  { name: "Contacto", href: "#contact" },
-] as const;
+import { NavLinkItem } from "./NavLinkItem";
+import { useLanguage } from "../../contexts/LanguageContext";
 
 interface NavLinksProps {
   onLinkClick?: (e: React.MouseEvent<HTMLAnchorElement>, href: string) => void;
@@ -19,6 +14,16 @@ export function NavLinks({
   className,
   itemClassName,
 }: NavLinksProps) {
+  const { t } = useLanguage();
+
+  const navLinks = [
+    { name: t.navbar.links.home, href: "#hero" },
+    { name: t.navbar.links.about, href: "#about" },
+    { name: t.navbar.links.stack, href: "#stack" },
+    { name: t.navbar.links.experience, href: "#experience" },
+    { name: t.navbar.links.contact, href: "#contact" },
+  ] as const;
+
   return (
     <ul className={className}>
       {navLinks.map((link) => (
