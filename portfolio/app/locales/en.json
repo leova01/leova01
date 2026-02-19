@@ -120,7 +120,7 @@
       "linkedin": "LinkedIn",
       "email": "Email"
     },
-    "footer": "© 2026 Leonel Valcarcel. Built with React and Tailwind CSS."
+    "footer": "© 2026 Leonel Valcarcel. Built with Next.js and Tailwind CSS."
   },
   "language": {
     "toggle": "Language",
