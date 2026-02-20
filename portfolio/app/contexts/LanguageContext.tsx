@@ -1,6 +1,12 @@
 "use client";
 
-import { createContext, useContext, useState, ReactNode } from "react";
+import {
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+  ReactNode,
+} from "react";
 import en from "../locales/en.json";
 import es from "../locales/es.json";
 
@@ -13,7 +19,9 @@ interface LanguageContextType {
   t: Translations;
 }
 
-const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+const LanguageContext = createContext<LanguageContextType | undefined>(
+  undefined,
+);
 
 const translations = {
   en,
@@ -25,18 +33,16 @@ interface LanguageProviderProps {
 }
 
 export function LanguageProvider({ children }: LanguageProviderProps) {
-  // Initialize language from localStorage or browser detection
-  const getInitialLanguage = (): Language => {
-    if (typeof window === "undefined") return "en";
-
+  const [language, setLanguageState] = useState<Language>("en");
+  useEffect(() => {
     const savedLang = localStorage.getItem("language") as Language | null;
-    if (savedLang) return savedLang;
-
-    const browserLang = navigator.language.toLowerCase();
-    return browserLang.startsWith("es") ? "es" : "en";
-  };
-
-  const [language, setLanguageState] = useState<Language>(getInitialLanguage);
+    if (savedLang) {
+      setLanguageState(savedLang);
+    } else {
+      const browserLang = navigator.language.toLowerCase();
+      setLanguageState(browserLang.startsWith("es") ? "es" : "en");
+    }
+  }, []);
 
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);
